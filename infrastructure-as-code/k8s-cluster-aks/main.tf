@@ -21,6 +21,7 @@ provider "azurerm" {
   client_secret   = "${data.vault_generic_secret.azure_credentials.data["client_secret"]}"
 }
 
+
 # Azure Resource Group
 resource "azurerm_resource_group" "k8sexample" {
   name     = "${var.resource_group_name}"
